@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 14px 30px;
+
+  transition: all 0.25s ease;
+}
+
+/* NAV STRUCTURE */
+.nav-links {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* LEFT + RIGHT GROUPS */
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* UNIFIED NAV BUTTON STYLE */
+.nav-btn {
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 14px;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+
+  transition: all 0.25s ease;
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+/* HOVER EFFECT */
+.nav-btn:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+  color: #0ea5e9;
+}
+
+/* ACTIVE UNDERLINE EFFECT */
+.nav-btn::after {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  bottom: 6px;
+
+  transform: translateX(-50%);
+
+  width: 0%;
+  height: 2px;
+
+  background: #0ea5e9;
+
+  border-radius: 10px;
+
+  transition: width 0.25s ease;
+}
+
+.nav-btn:hover::after {
+  width: 55%;
+}
+
+/* SLIGHT ACTIVE FEEL (optional nice touch) */
+.nav-btn:active {
+  transform: translateY(0px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-left,
+  .nav-right {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

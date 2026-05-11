@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  background: #07111f;
+}
+
+/* PAGE */
+
+.signin-page{
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,0.18), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(147,51,234,0.18), transparent 25%),
+    linear-gradient(135deg, #07111f, #0f172a);
+
+  overflow: hidden;
+  position: relative;
+}
+
+/* GLOW EFFECTS */
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.3;
+}
+
+.circle.one{
+  width: 350px;
+  height: 350px;
+
+  background: #2563eb;
+
+  top: -120px;
+  left: -100px;
+}
+
+.circle.two{
+  width: 300px;
+  height: 300px;
+
+  background: #9333ea;
+
+  bottom: -100px;
+  right: -100px;
+}
+
+/* CARD */
+
+.signin-card{
+  width: 100%;
+  max-width: 1100px;
+
+  display: flex;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(18px);
+
+  border-radius: 35px;
+
+  overflow: hidden;
+
+  position: relative;
+  z-index: 2;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* LEFT SIDE */
+
+.signin-left{
+  flex: 1;
+
+  padding: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(37,99,235,0.25),
+      rgba(147,51,234,0.18)
+    );
+}
+
+.signin-badge{
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border-radius: 40px;
+
+  background: rgba(255,255,255,0.08);
+
+  color: #cbd5e1;
+
+  margin-bottom: 20px;
+}
+
+.signin-left h1{
+  font-size: 52px;
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+
+  color: white;
+}
+
+.signin-left h1 span{
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.signin-left p{
+  color: #cbd5e1;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+.signin-left img{
+  width: 100%;
+  height: 380px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+}
+
+/* RIGHT SIDE */
+
+.signin-right{
+  flex: 1;
+
+  padding: 60px 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signin-right h2{
+  color: white;
+  font-size: 38px;
+
+  margin-bottom: 25px;
+}
+
+/* STATUS */
+
+.loading-msg,
+.success-msg,
+.error-msg{
+  padding: 14px;
+
+  border-radius: 15px;
+
+  margin-bottom: 18px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.loading-msg{
+  background: rgba(59,130,246,0.15);
+  color: #60a5fa;
+}
+
+.success-msg{
+  background: rgba(34,197,94,0.15);
+  color: #4ade80;
+}
+
+.error-msg{
+  background: rgba(239,68,68,0.15);
+  color: #f87171;
+}
+
+/* INPUT */
+
+.input-group{
+  margin-bottom: 22px;
+}
+
+.input-group label{
+  display: block;
+
+  color: white;
+
+  margin-bottom: 10px;
+
+  font-weight: 500;
+}
+
+.input-group input{
+  width: 100%;
+
+  padding: 16px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition: 0.3s ease;
+}
+
+.input-group input::placeholder{
+  color: #94a3b8;
+}
+
+.input-group input:focus{
+  border-color: #60a5fa;
+
+  box-shadow:
+    0 0 20px rgba(96,165,250,0.2);
+}
+
+/* BUTTON */
+
+.signin-btn{
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  margin-top: 10px;
+}
+
+.signin-btn:hover{
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 30px rgba(37,99,235,0.35);
+}
+
+/* FOOTER */
+
+.signin-footer{
+  margin-top: 25px;
+
+  text-align: center;
+}
+
+.signin-footer p{
+  color: #cbd5e1;
+}
+
+.signin-footer a{
+  color: #60a5fa;
+
+  text-decoration: none;
+
+  margin-left: 5px;
+
+  font-weight: 600;
+}
+
+.signin-footer a:hover{
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px){
+
+  .signin-card{
+    flex-direction: column;
+  }
+
+  .signin-left{
+    display: none;
+  }
+
+  .signin-right{
+    padding: 40px 30px;
+  }
+}
+
+@media(max-width: 600px){
+
+  .signin-right h2{
+    font-size: 30px;
+  }
+
+  .signin-page{
+    padding: 20px;
+  }
+}
